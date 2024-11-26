@@ -1,0 +1,10 @@
+.item img{
+    height: 200px;
+    object-fit: contain;
+    margin-bottom: 15px;
+}
+.item p{
+    font-size: 16px;
+    margin-top: 0;
+    margin-bottom: 0;
+}

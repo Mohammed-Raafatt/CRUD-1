@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/all.min.css">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <title>cruds js</title>
+</head>
+<body>
+    
+    <div class="w-75 mx-auto p-4 my-5">
+        <div class="form-floating mb-4">
+            <input oninput="validateInputs(this)" type="text" class="form-control" id="productName" placeholder="name@example.com">
+            <div class="alert alert-danger p-1 mt-2 d-none">It must start with a capital char then 2 - 10 chars</div>
+            <label for="productName">Product Name</label>
+        </div>
+        <div class="form-floating mb-4">
+            <input oninput="validateInputs(this)" type="number" class="form-control" id="productPrice" placeholder="name@example.com">
+            <div class="alert alert-danger p-1 mt-2 d-none">price must be 10 - 99999 EGP</div>
+            <label for="productPrice">Product Price</label>
+        </div>
+        <div class="form-floating mb-4">
+            <input oninput="validateInputs(this)" list="list" type="text" class="form-control" id="productCategory" placeholder="name@example.com">
+            <div class="alert alert-danger p-1 mt-2 d-none">Category should be (tv,mobils,screens,laptop)</div>
+            <label for="productCategory">Product Category</label>
+            <datalist id="list">
+                <option value="tv">tv</option>
+                <option value="screens">screens</option>
+                <option value="mobils">mobils</option>
+                <option value="laptop">laptop</option>
+            </datalist>
+        </div>
+        <div class="form-floating mb-4">
+            <textarea oninput="validateInputs(this)" id="productDesc"  class="form-control"  placeholder="name@example.com"></textarea>
+            <div class="alert alert-danger p-1 mt-2 d-none">Description must be atleast 4 characters</div>
+            <label for="productDesc">Product Description</label>
+        </div>
+        <div class="form-floating mb-4">
+            <input type="file" class="form-control" id="productImg" placeholder="name@example.com">
+            <label for="productImg">Upload Product Image</label>
+        </div>
+        <button id="add" onclick="addProduct()" class="btn btn-primary btn-lg">Add Product</button>
+        <button id="update" onclick="updateProduct()" class="btn btn-warning btn-lg d-none">Update Product</button>
+        <input oninput="search()" type="search" class="form-control my-3" placeholder="search..." id="searchProducts">
+    </div>
+
+
+    <div class="container">
+        <div class="row" id="myRow">
+            
+           
+        </div>
+    </div>
+
+
+
+
+
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/index.js"></script>
+</body>
+</html>
